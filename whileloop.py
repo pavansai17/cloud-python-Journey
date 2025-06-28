@@ -11,7 +11,7 @@ total=0
 while i<=n:
     total+=i
     i+=1
-
+print("Total sum is ",total)
 #Example 3:Print all Even numbers from 1 to N
 i=1
 n=int(input("Enter a value:"))
