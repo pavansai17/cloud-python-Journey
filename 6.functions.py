@@ -61,7 +61,7 @@ def increase():
 increase()
 print("Updated count:", count)
 
-# 9️⃣ Nested Functions
+#  Nested Functions
 def outer():
     print("Outer function")
 
@@ -72,7 +72,7 @@ def outer():
 
 outer()
 
-# 🔟 Docstring example
+# Docstring example
 def multiply(a, b):
     """Returns the product of two numbers."""
     return a * b
