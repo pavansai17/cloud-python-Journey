@@ -1,1 +1,2 @@
 # cloud-python-Journey
+Here my entire journey [cloud-python-journey] files and information is stored on git hub.Things that i learned and things that i had practiced are placed on git hub by using repository named cloud-python-journey.
