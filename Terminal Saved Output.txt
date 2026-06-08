@@ -1,0 +1,149 @@
+root@vagrant:/boot/grub# cd
+root@vagrant:~# cd /proc
+root@vagrant:/proc# ls
+1    109  119  143   20    228   236   254  27   286  296  305  4    714  79   87   9    959        consoles     iomem        loadavg       sched_debug    thread-self
+10   11   12   15    2064  229   2367  255  270  287  297  306  440  724  8    870  90   96         cpuinfo      ioports      locks         schedstat      timer_list
+100  110  120  16    21    23    2374  256  271  288  298  307  441  733  80   876  904  97         crypto       irq          mdstat        scsi           tty
+101  111  121  1632  2151  230   2390  257  272  289  299  308  500  735  805  877  91   98         devices      kallsyms     meminfo       self           uptime
+102  112  122  17    2152  231   24    259  274  29   3    309  516  736  81   879  92   99         diskstats    kcore        misc          slabinfo       version
+103  113  123  1790  219   232   247   26   275  290  30   31   544  739  82   88   923  acpi       driver       keys         modules       softirqs       version_signature
+104  114  124  1799  22    233   249   261  277  291  300  310  6    758  83   882  93   asound     execdomains  key-users    mounts        stat           vmallocinfo
+105  115  13   18    220   2333  25    262  278  292  301  315  710  766  84   884  94   buddyinfo  fb           kmsg         net           swaps          vmstat
+106  116  133  1847  221   2334  251   263  28   293  302  342  711  767  85   886  95   bus        filesystems  kpagecgroup  pagetypeinfo  sys            zoneinfo
+107  117  136  185   224   234   252   266  281  294  303  365  712  77   863  887  955  cgroups    fs           kpagecount   partitions    sysrq-trigger
+108  118  14   2     226   2347  253   267  284  295  304  396  713  78   867  899  957  cmdline    interrupts   kpageflags   pressure      sysvipc
+root@vagrant:/proc# uptime
+ 06:12:47 up 24 min,  1 user,  load average: 0.03, 0.02, 0.00
+root@vagrant:/proc# free -m
+              total        used        free      shared  buff/cache   available
+Mem:            719         163          99           1         456         468
+Swap:          1437           0        1437
+root@vagrant:/proc# cat /proc/uptime
+1676.66 3306.83
+root@vagrant:/proc# free -m
+              total        used        free      shared  buff/cache   available
+Mem:            719         164          98           1         456         466
+Swap:          1437           0        1437
+root@vagrant:/proc# exit
+logout
+vagrant@vagrant:~$ exit
+logout
+pavanmacbook@Ankalas-MacBook-Air ubuntu % vagrant ssh
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-89-generic aarch64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed 25 Feb 2026 06:20:12 AM UTC
+
+  System load:  0.0                Processes:             203
+  Usage of /:   18.6% of 19.56GB   Users logged in:       0
+  Memory usage: 31%                IPv4 address for eth1: 192.168.56.11
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Wed Feb 25 05:51:28 2026 from 192.168.56.1
+vagrant@vagrant:~$ sudo -i
+root@vagrant:~# ls
+snap
+root@vagrant:~# pwd
+/root
+root@vagrant:~# ls
+snap
+root@vagrant:~# pwd
+/root
+root@vagrant:~# mkdir dev
+root@vagrant:~# 
+root@vagrant:~# ls
+dev  snap
+root@vagrant:~# pwd
+/root
+root@vagrant:~# cd /dev
+root@vagrant:/dev# touch pavan.txt
+root@vagrant:/dev# ls
+autofs           cuse      hidraw2    loop3         nvme0      ptp1    stdin   tty16  tty26  tty36  tty46  tty56  tty9       ttyS17  ttyS27  ttyS9      vcs4   vcsu1        zero
+block            disk      hugepages  loop4         nvme0n1    pts     stdout  tty17  tty27  tty37  tty47  tty57  ttyprintk  ttyS18  ttyS28  ubuntu-vg  vcs5   vcsu2        zfs
+bsg              dm-0      hwrng      loop5         nvme0n1p1  random  tty     tty18  tty28  tty38  tty48  tty58  ttyS0      ttyS19  ttyS29  udmabuf    vcs6   vcsu3
+btrfs-control    dvd       initctl    loop6         nvme0n1p2  rfkill  tty0    tty19  tty29  tty39  tty49  tty59  ttyS1      ttyS2   ttyS3   uhid       vcsa   vcsu4
+bus              ecryptfs  input      loop7         nvme0n1p3  rtc     tty1    tty2   tty3   tty4   tty5   tty6   ttyS10     ttyS20  ttyS30  uinput     vcsa1  vcsu5
+cdrom            fb0       kmsg       loop-control  pavan.txt  rtc0    tty10   tty20  tty30  tty40  tty50  tty60  ttyS11     ttyS21  ttyS31  urandom    vcsa2  vcsu6
+cdrw             fd        lightnvm   mapper        port       sg0     tty11   tty21  tty31  tty41  tty51  tty61  ttyS12     ttyS22  ttyS4   userio     vcsa3  vfio
+char             full      log        mem           ppp        shm     tty12   tty22  tty32  tty42  tty52  tty62  ttyS13     ttyS23  ttyS5   vcs        vcsa4  vga_arbiter
+console          fuse      loop0      mqueue        psaux      snd     tty13   tty23  tty33  tty43  tty53  tty63  ttyS14     ttyS24  ttyS6   vcs1       vcsa5  vhci
+core             hidraw0   loop1      net           ptmx       sr0     tty14   tty24  tty34  tty44  tty54  tty7   ttyS15     ttyS25  ttyS7   vcs2       vcsa6  vhost-net
+cpu_dma_latency  hidraw1   loop2      null          ptp0       stderr  tty15   tty25  tty35  tty45  tty55  tty8   ttyS16     ttyS26  ttyS8   vcs3       vcsu   vhost-vsock
+root@vagrant:/dev# cp net
+cp: missing destination file operand after 'net'
+Try 'cp --help' for more information.
+root@vagrant:/dev# cp pavan.txt
+cp: missing destination file operand after 'pavan.txt'
+Try 'cp --help' for more information.
+root@vagrant:/dev# nano pavan.txt
+
+  GNU nano 4.8                                                                         pavan.txt                                                                          Modified  
+HeLLo man you are doing great dont stop till you got enough.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help     ^O Write Out    ^W Where Is     ^K Cut Text     ^J Justify      ^C Cur Pos      M-U Undo        M-A Mark Text   M-] To Bracket  M-Q Previous    ^B Back
+^X Exit         ^R Read File    ^\ Replace      ^U Paste Text   ^T To Spell     ^_ Go To Line   M-E Redo        M-6 Copy Text   ^Q Where Was    M-W Next        ^F Forward
